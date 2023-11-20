@@ -9,6 +9,11 @@ class Race {
 
     addPlayer(player: Vehicle) {
         this.players.push(player);
+        this.addBots(4)
+    }
+
+    addBots(num: number) {
+        this.players.push();
     }
 }
 
