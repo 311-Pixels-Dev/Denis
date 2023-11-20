@@ -1,0 +1,19 @@
+{
+  "name": "gara_folle",
+  "version": "1.0.0",
+  "description": "Life is a race and we are the racists!",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tort",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0",
+    "readline-promise": "^1.0.5",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0"
+  }
+}
