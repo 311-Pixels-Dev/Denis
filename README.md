@@ -1,2 +1,0 @@
-# Denis
-Scemo chi legge
