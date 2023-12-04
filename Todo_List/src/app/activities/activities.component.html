@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row d-flex">
+        <div class="col-12">
+            <input type="text" [(ngModel)]="activity" />
+            <input type="text" [(ngModel)]="category" />
+            
+            <button class="btn btn-primary" (click)="addActivity()">Aggiungi</button>
+        </div>
+    </div>
+    <div>
+        <h1> Unfinished acts </h1>
+        <p *ngFor="let act of unfinishedActs" [style.text-decoration]="act.complete ? 'line-through' : 'none'">
+            {{act.name}} - <input (click)="setComplete(act)" mdbCheckbox class="form-check-input" type="checkbox" [value]="act.complete" id="flexCheckDefault"/>
+        </p>
+        <hr>
+        <h1> Finished acts </h1>
+        <ul ngbNav #nav="ngbNav" class="nav-tabs">
+            <li ngbNavItem *ngFor="let cat of categories">
+                <button ngbNavLink (click)="getActs(cat)">{{cat}}</button>
+                <ng-template ngbNavContent>
+                    <p *ngFor="let act of catActs">
+                        {{act.name}}
+                    </p>
+                </ng-template>
+            </li>
+        </ul>
+        <div [ngbNavOutlet]="nav"></div>
+    </div>
+</div>
